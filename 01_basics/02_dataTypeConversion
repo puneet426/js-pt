@@ -1,0 +1,45 @@
+let score="55"
+
+console.log(typeof score);
+// output: string
+console.log(typeof(score));
+// output: string
+let valueInNumber = Number(score)
+console.log(typeof valueInNumber);
+// output: number
+console.log(valueInNumber);
+// output: 55
+
+
+let score1="55abc"
+
+console.log(typeof score1);
+// output: string
+console.log(typeof(score1));
+// output: string
+let valueInNumber1 = Number(score1)
+console.log(typeof valueInNumber1);
+// output: number
+console.log(valueInNumber1);
+// output: NaN
+
+//"33" => 33
+//"abc" => NaN
+//true =>1; false=>0;
+//null => 0
+
+let isLoggedIn=0
+let booleanIsLoggedIn=Boolean(isLoggedIn)
+console.log(booleanIsLoggedIn);
+
+let isLoggedIn1=""
+let booleanIsLoggedIn1=Boolean(isLoggedIn1)
+console.log(booleanIsLoggedIn1);
+
+// 1=>true ; 0=>false;
+// "abc"=>true; ""=>false; even if we give "    " spaces then it return the value true
+
+let somenum=44
+let stringnumber=String(somenum)
+console.log(stringnumber);
+// the conversion first letter must be uppercase Boolean String Number
