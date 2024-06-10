@@ -1,2 +1,2 @@
 # js-pt
-full course
+full course of Chai and Code 
