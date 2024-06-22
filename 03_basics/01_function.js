@@ -32,3 +32,27 @@ function loginUserMessage(username){
 }
 // console.log(loginUserMessage("puneet23"))
 console.log(loginUserMessage("puneet426"))
+
+function calculateCartPrice(...num1){     //... is used to make an array  //rest operator
+    return num1
+}
+// console.log(calculateCartPrice(200,300,500,1000))
+
+const user={
+    username: "Puneet",
+    price:1000
+}
+function calculateCartPrice(anyobject){
+    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
+}
+// calculateCartPrice(user)
+calculateCartPrice({
+    username:"puneet",
+price:999
+})
+const myNewArray = [200,2,34,55,7554]
+function returnSecondValue(getArray){
+    return getArray[4]
+}
+// console.log(returnSecondValue(myNewArray));
+console.log(returnSecondValue([23,44,567,876,1289]));
