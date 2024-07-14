@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: rgb(40, 37, 37); color: aliceblue; ">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="./Puneet/pt.jpg" alt="photoshop"></li>
+            <li><img width="200px" id="river" src="./Puneet/pt1.jpg" alt="photoshop"></li>
+            <li><img width="200px" id="owl" src="./Puneet/pt2.jpg" alt="" ></li>
+            <li><img width="200px" id="prayer" src="./Puneet/pt3.jpg" alt="photoshop"></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // Mouse Events
+   // document.getElementById('owl').onclick = function(){
+      //  alert('You clicked on the owl image');
+   // }
+
+   // attachEvent()
+    //jQuery -on
+
+
+    //document.getElementById('owl').addEventListener('click',function(e){
+       // console.log(e)
+        //alert('You clicked on the owl image');
+    //},false)
+    // type ,timestamp , defaultPrevented 
+    // target , toElement , srcElement , currentTarget , clientX, clientY , ScreenX , ScreenY
+    // altkey , ctrlkey , shiftkey , keycode 
+
+    // Event Propogation
+   // document.getElementById('images').addEventListener('click',function(e){
+     //   console.log("You clicked inside the UL");
+   // },false)
+   // document.getElementById('owl').addEventListener('click',function(e){
+   //     console.log("owl clicked");
+   //     e.stopPropagation() //event doesnot bubble means only owl clicked is print and You clicked inside the UL does not print
+   // },false)   // by the false or default the process known as  bubbling means the process goes from inner element to outer such as script used in owl is used first then in the UL
+    // by the True the procces is known as capturing means the process starts from outer to inner
+
+//document.getElementById('google').addEventListener('click',function(e){
+   // e.preventDefault() // it prevents the default action of the link
+   // e.stopPropagation()
+   // console.log("google clicked")
+   
+//})
+
+// remove image
+
+//document.querySelector('#images').addEventListener('click',function(e){
+ //   console.log(e.target.parentNode);
+   // let removeIt = e.target.parentNode                                                    // in this method if we click on the li then all images are remove so we have to add some conditions on it
+   // removeIt.remove()
+ //  removeIt.parentNode.removeChild(removeIt)
+//},false)
+
+document.querySelector('#images').addEventListener('click',function(e){
+    console.log(e.target.tagName);
+    if(e.target.tagName === 'IMG'){
+      
+        let removeIt = e.target.parentNode
+        removeIt.parentNode.removeChild(removeIt)
+    }
+    
+},false)
+console.log(e.target.id)
+
+
+</script>
+</html>
+
+
+
+
+
+
